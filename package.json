@@ -1,0 +1,17 @@
+{
+  "name": "art_generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+
+  "scripts": {
+    "generate": "node index.js"
+  },
+
+  "author": "Daniel Eugene Botha",
+  "license": "ISC",
+  "dependencies": {
+    "all": "^0.0.0",
+    "canvas": "^2.8.0"
+  }
+}
