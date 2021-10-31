@@ -1,3 +1,5 @@
+# Cryptolienz NFT 69x69 pixel images
+
 # Project Setup
 - install `node.js` on your local system (https://nodejs.org/en/)
 - install libgif-dev and libjpeg-dev
