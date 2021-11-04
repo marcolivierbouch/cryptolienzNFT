@@ -122,7 +122,7 @@ const height = 69;
 const description = "This is a cryptolienzNFT";
 // base url to use in metadata file
 // the id of the nft will be added to this url, in the example e.g. https://hashlips/nft/1 for NFT with id 1
-const baseImageUri = "https://marco/nft";
+const baseImageUri = "https://gateway.pinata.cloud/ipfs/Qmd7jLHDogUd1mkb2msTLtCHoUHqA4DPf1s25UeHFk2fqx";
 // id for edition to start from
 const startEditionFrom = 1;
 // amount of NFTs to generate in edition
@@ -145,7 +145,9 @@ const layers = [
   addLayer('body'),
   addLayer('heads'),
   addLayer('eyes'),
+  addLayer('hats'),
   addLayer('mouth'),
+  addLayer('others'),
 ];
 
 // provide any specific percentages that are required for a given layer and rarity level

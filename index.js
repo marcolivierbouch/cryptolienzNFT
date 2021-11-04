@@ -50,7 +50,7 @@ const generateMetadata = (_dna, _edition, _attributesList) => {
     dna: _dna.join(""),
     name: `#${_edition}`,
     description: description,
-    image: `${baseImageUri}/${_edition}`,
+    image: `${baseImageUri}/${_edition}.png`,
     edition: _edition,
     date: dateTime,
     attributes: _attributesList,
@@ -160,7 +160,12 @@ const getRarity = (_editionCount) => {
 };
 
 const writeMetaData = (_data) => {
-  fs.writeFileSync("./output/_metadata.json", _data);
+  let count = 1;
+  let data = JSON.parse(_data);
+  for (item in data) {
+    fs.writeFileSync(`./output/${count}.json`, JSON.stringify(data[count - 1]));
+    count += 1;
+  }
 };
 
 // holds which dna has already been used during generation
@@ -176,9 +181,6 @@ const startCreating = async () => {
 
   console.log();
   console.log('start creating NFTs.')
-
-  // clear meta data from previous run
-  writeMetaData("");
 
   // prepare dnaList object
   rarityWeights.forEach((rarityWeight) => {
